@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 
 namespace Backend.TechChallenge.Api.Controllers
 {
@@ -15,7 +14,7 @@ namespace Backend.TechChallenge.Api.Controllers
             return reader;
         }
 
-        private void WriteUserToFile(User user)
+        /*private void WriteUserToFile(User user)
         {
             var path = Directory.GetCurrentDirectory() + "/Files/Users.txt";
 
@@ -24,5 +23,6 @@ namespace Backend.TechChallenge.Api.Controllers
                 outputFile.WriteLine(user.Name + "," + user.Email + "," + user.Phone + "," + user.Address + "," + user.UserType + "," + user.Money);
             }
         }
+        */
     }
 }

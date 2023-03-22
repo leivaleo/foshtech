@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend.TechChallenge.Application.Interface\Backend.TechChallenge.Application.Interfaces.csproj" />
+    <ProjectReference Include="..\Backend.TechChallenge.Infrastructure.Interfaces\Backend.TechChallenge.Infrastructure.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

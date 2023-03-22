@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj": {}
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj": {
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj",
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj",
         "projectName": "Backend.TechChallenge.Api",
-        "projectPath": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj",
         "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\obj\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -29,9 +29,19 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\Backend.TechChallenge.Application.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\Backend.TechChallenge.Application.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -41,16 +51,32 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.4.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[5.6.3, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -64,12 +90,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.31, 3.1.31]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -78,18 +98,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj": {
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj",
-        "projectName": "Backend.TechChallenge.Test",
-        "projectPath": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj",
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj",
+        "projectName": "Backend.TechChallenge.Application.Interfaces",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj",
         "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Test\\obj\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -99,7 +119,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -107,11 +127,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj": {
-                "projectPath": "D:\\OneDrive\\Documentos\\Visual Studio 2022\\Backend.TechChallenge-main\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj"
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj"
               }
             }
           }
@@ -123,8 +143,287 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\Backend.TechChallenge.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\Backend.TechChallenge.Application.csproj",
+        "projectName": "Backend.TechChallenge.Application",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\Backend.TechChallenge.Application.csproj",
+        "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\SoftwareMadrid\\Proyects\\Web\\GenericDataAccessProject\\Publish": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Application.Interface\\Backend.TechChallenge.Application.Interfaces.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj",
+        "projectName": "Backend.TechChallenge.CrossCutting",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\SoftwareMadrid\\Proyects\\Web\\GenericDataAccessProject\\Publish": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj",
+        "projectName": "Backend.TechChallenge.Infrastructure.Interfaces",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\SoftwareMadrid\\Proyects\\Web\\GenericDataAccessProject\\Publish": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj",
+        "projectName": "Backend.TechChallenge.Test",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Test\\Backend.TechChallenge.Test.csproj",
+        "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\SoftwareMadrid\\Proyects\\Web\\GenericDataAccessProject\\Publish": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Api\\Backend.TechChallenge.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -163,7 +462,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
