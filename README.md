@@ -1,3 +1,35 @@
+# Improvements made for this technical challenge
+
+In order to present a technical proposal that could serve as the basis for a real service, I've decided to make the following improvements:
+- In the Backend project. TechChallenge.Api I've migrated the original .net core version from 3.1 (without support) to 6.0 because it's a LTS version
+- I've added database persistence, using EF using Code First approach
+- The DB will be generated automatically when starting the service. To deactivate the automatic management of the DB, the value of the "AutoMigrate" variable must be changed to "false"
+- Within the User entity, the following improvements have been made:
+  - Added ID and basic traceability data
+  - The "UserType" attribute now uses an Enum data type which makes it easier to type actions and minimizes errors
+- Implementation of Repository, UnitOfWork, Dependency injection and MVVM design patterns
+- Improvement of the architecture to decouple the presentation, application and infrastructure layers
+- Creating base classes for the data models used in the presentation layer and the entity data that is managed in the infrastructure layer
+
+
+For the tests:
+- Implementation of a version of the in-memory database for set used in all tests
+- Creation of tests for the infrastructure, application and presentation layers taking into account the scope of each one of them 
+
+
+# Assumpiotns to execute the service
+
+This technical challenge as been done keeping a account following assumpiotns:
+- The environment where the solution is run has an instance of SQL Server "(localdb)\\MSSQLLocalDB". Otherwise, you must change the connection string in the corresponding appsettings file
+
+
+# Recommended improvements that have not been implemented
+
+Due to lack of time, the improvements detailed below have not been implemented
+- Logger
+- Use of environment variables, in order to comply with the 12factors principles
+
+
 # Backend.TechChallenge
 
 A developer went on vacation and several issues arose in the project that needed to be resolved.
