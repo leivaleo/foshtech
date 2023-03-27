@@ -11,5 +11,29 @@ namespace Backend.TechChallenge.Application.Interfaces.EntityModels.User
         public string Phone { get; set; }
         public UserTypeEnum UserType { get; set; }
         public decimal Money { get; set; }
+
+
+        public static string ValidateErrors(UserModel user)
+        {
+            if (user == null) 
+                return "User data is null";
+
+            var errors = "";
+
+            if (String.IsNullOrEmpty(user.Name))
+                //Validate if Name is null
+                errors = "The name is required";
+            if (String.IsNullOrEmpty(user.Email))
+                //Validate if Email is null
+                errors = errors + " The email is required";
+            if (String.IsNullOrEmpty(user.Address))
+                //Validate if Address is null
+                errors = errors + " The address is required";
+            if (String.IsNullOrEmpty(user.Phone))
+                //Validate if Phone is null
+                errors = errors + " The phone is required";
+
+            return errors;
+        }
     }
 }

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Backend.TechChallenge.CrossCutting\Backend.TechChallenge.CrossCutting.csproj" />
+    <ProjectReference Include="..\Backend.TechChallenge.Infrastructure.Interfaces\Backend.TechChallenge.Infrastructure.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

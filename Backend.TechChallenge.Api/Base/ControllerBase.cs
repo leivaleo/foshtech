@@ -13,7 +13,6 @@ namespace Backend.TechChallenge.Api.Base
         where TEntity : EntityBase
     {
         #region Constant
-        protected String COMBO_TEXT_FIELD_NAME = "";
         #endregion Constant
 
         #region Variable

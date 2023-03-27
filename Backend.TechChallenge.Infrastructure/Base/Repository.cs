@@ -22,91 +22,120 @@ namespace Backend.TechChallenge.Infrastructure.Base
         }
 
         #region GET
-        public async Task<QueryResult<TEntity>> GetAll(QueryState<TEntity> queryState, bool allowTracking = true)
+        public async Task<QueryResult<TEntity>?> GetAll(QueryState<TEntity> queryState, bool? allowTracking = true)
         {
-            if (queryState.Take == null || queryState.Take == 0)
-                queryState.Take = 10;
-
-            if (queryState.Skip == null)
-                queryState.Skip = 0;
-
-            IQueryable<TEntity> list = _dbSet;
-
-            // Configure tracking
-            if (!allowTracking)
-                list = list.AsNoTracking();
-
-            // Add filtering
-            if (queryState.Filter != null)
-                list = list.Where(queryState.Filter);
-
-            // Add sorting
-            if (queryState.Sort != null)
+            try
             {
-                if (queryState.Sort.Direction == SortOrderEnum.Ascending)
-                    list = list.OrderBy(queryState.Sort.By);
-                else
-                    list = list.OrderByDescending(queryState.Sort.By);
-            }
+                if (queryState.Take == null || queryState.Take == 0)
+                    queryState.Take = 10;
 
-            // Get total records of the query (without pagination yet)
-            var total = list.Count();
+                if (queryState.Skip == null)
+                    queryState.Skip = 0;
 
-            // Add paging
-            list = list.Skip((int)queryState.Skip);
-            list = list.Take((int)queryState.Take);
+                IQueryable<TEntity> list = _dbSet;
 
-            // Add navigable entities
-            if (queryState.Include != null)
-            {
-                foreach (var includeAttributeName in queryState.Include)
+                // Configure tracking
+                if (allowTracking != null && !(bool)allowTracking)
+                    list = list.AsNoTracking();
+
+                // Add filtering
+                if (queryState.Filter != null)
+                    list = list.Where(queryState.Filter);
+
+                // Add sorting
+                if (queryState.Sort != null)
                 {
-                    list = list.Include(includeAttributeName);
+                    if (queryState.Sort.Direction == SortOrderEnum.Ascending)
+                        list = list.OrderBy(queryState.Sort.By);
+                    else
+                        list = list.OrderByDescending(queryState.Sort.By);
                 }
-            }
 
-            // execute query and prepare the result
-            var result = new QueryResult<TEntity>()
+                // Get total records of the query (without pagination yet)
+                var total = list.Count();
+
+                // Add paging
+                list = list.Skip((int)queryState.Skip);
+                list = list.Take((int)queryState.Take);
+
+                // Add navigable entities
+                if (queryState.Include != null)
+                {
+                    foreach (var includeAttributeName in queryState.Include)
+                    {
+                        list = list.Include(includeAttributeName);
+                    }
+                }
+
+                // execute query and prepare the result
+                var result = new QueryResult<TEntity>()
+                {
+                    List = await list.ToListAsync(),
+                    Total = total
+                };
+                return result;
+            }
+            catch (Exception error)
             {
-                List = await list.ToListAsync(),
-                Total = total
-            };
-            return result;
+                // TODO: Log error
+            }
+            return null;
         }
 
-        public async Task<TEntity> GetByGuid(Guid guid, bool allowTracking = true)
+        public async Task<TEntity?> GetByGuid(Guid guid)
         {
-            TEntity entity = await _dbSet.FindAsync(guid);
-            if (entity != null)
-                return entity;
-            else
-                return null;
+            try
+            {
+                return await _dbSet.FindAsync(guid);
+            }
+            catch (Exception error)
+            {
+                // TODO: Log error
+            }
+            return null;
         }
         #endregion
 
         #region INSERT
 
-        public async Task<TEntity> Insert(TEntity entity)
+        public async Task<TEntity?> Insert(TEntity entity)
         {
-            var result = await _dbSet.AddAsync(entity);
-            return _mapper.Map<TEntity>(result.Entity);
+            try
+            {
+                var result = await _dbSet.AddAsync(entity);
+                return _mapper.Map<TEntity>(result.Entity);
+
+            }
+            catch (Exception error)
+            {
+                // TODO: Log error
+            }
+            return null;
         }
 
         #endregion
 
         #region UPDATE
 
-        public async Task<TEntity> Update(TEntity entity)
+        public async Task<TEntity?> Update(TEntity entity)
         {
-            var result = _dbSet.Update(entity);
-            return _mapper.Map<TEntity>(result.Entity);
+            try
+            {
+                var result = _dbSet.Update(entity);
+                return _mapper.Map<TEntity>(result.Entity);
+            }
+            catch (Exception error)
+            {
+                // TODO: Log error
+            }
+            return null;
         }
 
         #endregion
 
         #region DELETE
 
-        public async Task<TEntity> Delete(TEntity entity)
+        public async Task<TEntity?> Delete(TEntity entity)
         {
             try
             {
@@ -121,15 +150,24 @@ namespace Backend.TechChallenge.Infrastructure.Base
             }
             catch (Exception error)
             {
+                // TODO: Log error
             }
 
             return null;
         }
 
-        public async Task<TEntity> Undelete(TEntity entity)
+        public async Task<TEntity?> Undelete(TEntity entity)
         {
-            var result = _dbSet.Update(entity);
-            return _mapper.Map<TEntity>(result.Entity);
+            try
+            {
+                var result = _dbSet.Update(entity);
+                return _mapper.Map<TEntity>(result.Entity);
+            }
+            catch (Exception error)
+            {
+                // TODO: Log error
+            }
+            return null;
         }
 
         #endregion

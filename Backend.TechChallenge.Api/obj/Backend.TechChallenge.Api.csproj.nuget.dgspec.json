@@ -40,6 +40,9 @@
               },
               "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
                 "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\Backend.TechChallenge.Infrastructure.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\Backend.TechChallenge.Infrastructure.csproj"
               }
             }
           }
@@ -54,6 +57,18 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.15, )"
@@ -69,6 +84,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.15, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -132,6 +151,9 @@
             "projectReferences": {
               "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj": {
                 "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj"
               }
             }
           }
@@ -350,6 +372,10 @@
               "target": "Package",
               "version": "[6.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.15, )"
@@ -359,6 +385,78 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\Backend.TechChallenge.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\Backend.TechChallenge.Infrastructure.csproj",
+        "projectName": "Backend.TechChallenge.Infrastructure",
+        "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\Backend.TechChallenge.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\leole\\.nuget\\packages\\",
+        "outputPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\leole\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\SoftwareMadrid\\Proyects\\Web\\GenericDataAccessProject\\Publish": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.CrossCutting\\Backend.TechChallenge.CrossCutting.csproj"
+              },
+              "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj": {
+                "projectPath": "D:\\SoftwareMadrid\\Proyects\\Examples\\foshtech\\Backend.TechChallenge.Infrastructure.Interfaces\\Backend.TechChallenge.Infrastructure.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
             }
           },
           "imports": [

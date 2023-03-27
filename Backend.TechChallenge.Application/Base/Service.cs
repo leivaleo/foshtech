@@ -41,7 +41,7 @@ namespace Backend.TechChallenge.Application.Base
 
         public async virtual Task<TEntityModel> GetByGuid(Guid guid)
         {
-            TEntity listEntity = await _repository.GetByGuid(guid, true);
+            TEntity? listEntity = await _repository.GetByGuid(guid);
             return _mapper.Map<TEntityModel>(listEntity);
         }
         #endregion GET

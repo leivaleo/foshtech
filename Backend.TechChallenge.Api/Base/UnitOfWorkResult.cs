@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Backend.TechChallenge.CrossCutting.Base;
+using Backend.TechChallenge.CrossCutting.Exceptions;
 
 namespace Backend.TechChallenge.Api.Base
 {
@@ -50,6 +51,15 @@ namespace Backend.TechChallenge.Api.Base
             return result;
         }
 
+        public static UnitOfWorkResult SetResultError(string errorMessage) {
+            return new UnitOfWorkResult
+            {
+                Data = null,
+                Error = new UserException(errorMessage),
+                Total = 0
+            };
+        }
+
         private static bool IsTupleType(Type type)
         {
             return type.GetTypeInfo().IsGenericType && ValueTupleTypes.Contains(type.GetGenericTypeDefinition());
@@ -67,17 +77,8 @@ namespace Backend.TechChallenge.Api.Base
             typeof(ValueTuple<,,,,,,,>)
         });
 
-        private static IEnumerable<object> GetItemsFromTuple(System.Runtime.CompilerServices.ITuple tuple)
-        {
-            for (var i = 0; i < tuple.Length; i++)
-                yield return tuple[i];
-        }
-
         private static List<object> GetValueTupleItemObjects(object tuple) =>
             GetValueTupleItemFields(tuple.GetType()).Select(f => f.GetValue(tuple)).ToList();
-
-        private static List<Type> GetValueTupleItemTypes(Type tupleType) =>
-            GetValueTupleItemFields(tupleType).Select(f => f.FieldType).ToList();
 
         private static List<FieldInfo> GetValueTupleItemFields(Type tupleType)
         {

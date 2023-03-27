@@ -12,7 +12,15 @@ namespace Backend.TechChallenge.Infrastructure.Interfaces.Models
             : base(options)
         {
         }
-        
+
+        protected override void OnConfiguring (DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseInMemoryDatabase(databaseName: "TechChallengeTest");
+            }
+        }
+
         public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -52,7 +60,6 @@ namespace Backend.TechChallenge.Infrastructure.Interfaces.Models
                 entity.Property(e => e.Money)
                             .IsRequired()
                             .HasColumnName("Money");
-
 
                 entity.Property(e => e.InsertedDate)
                             .IsRequired()
